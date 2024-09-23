@@ -19,9 +19,13 @@ Combine the output of fasta_N_sub.py with the non-substituted decoy chromosomes:
     cat hs38d5_Nsub.fa decoy_chr.fa > ~/RPE1-SNPs/hs38d5_Nsub.with-decoy.fa
 
 vcf number of SNPs is 3832729
+
 vcf number of SNPs excluding decoy chr is 3799777
+
 hs38d5.fa 'N' count is 165046383
+
 expected 'N' count for hs38d5_Nsub.with-decoy.fa is therefore 165046383 + 3799777 = 168846160
+
 hs38d5_Nsub.with-decoy.fa 'N' count is 168846160
 
 Build the T->C conversion genome needed for hisat-3n (see https://daehwankimlab.github.io/hisat2/hisat-3n/):
