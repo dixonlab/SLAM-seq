@@ -1,0 +1,5 @@
+Library	Replicate	Labeling time	Treatment	Treatment length
+TP482_S35	1	45min	DMSO	24hr
+TP483_S36	2	45min	DMSO	24hr
+TP484_S37	1	45min	dTAG	24hr
+TP485_S38	2	45min	dTAG	24hr
