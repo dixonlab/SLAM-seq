@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-
-# i need to check this vs. Ami's version
 master_dir = '~/hisat-3n-FR'
 min_MQ = 10
 gtf_path = '~/gencode.v25/gencode.v25.annotation.gtf'
