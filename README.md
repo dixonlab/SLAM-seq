@@ -4,8 +4,8 @@ Filter vcf file:
 
 vcf file was broken down into the different chromosomes (i.e. chr1.vcf, chr2.vcf, etc.) using split_vcf_by_chr.pl
 
-filtered SNPs on non-decoy chromosomes in hs38d5.fa were replaced with N using fasta_N_sub.py
-    dependencies are pandas, math, subprocess, pathlib, and os
+filtered SNPs on non-decoy chromosomes in hs38d5.fa were replaced with N using fasta_N_sub.py. Dependencies are pandas, math, subprocess, pathlib, and os.
+
 number of lines in hs38d5_Nsub.fa is 51471479
 
 to extract only decoy:
