@@ -1,16 +1,18 @@
 Filter vcf file:
-    bcftools filter -O z -o RPE-1.variants.filtered.vcf.gz -i 'QUAL > 100 && INFO/DP > 10 && TYPE="SNP"' RPE-1.variants.vcf.gz
+	bcftools filter -O z -o RPE-1.variants.filtered.vcf.gz -i 'QUAL > 100 && INFO/DP > 10 && TYPE="SNP"' RPE-1.variants.vcf.gz
 
-vcf file was broken down into the different chromosomes (i.e. chr1.vcf, chr2.vcf, etc.) using:
-    split_vcf_by_chr.pl
+vcf file was broken down into the different chromosomes (i.e. chr1.vcf, chr2.vcf, etc.) using: split_vcf_by_chr.pl
 
 filtered SNPs on non-decoy chromosomes in hs38d5.fa were replaced with N using fasta_N_sub.py
     dependencies are pandas, math, subprocess, pathlib, and os
 number of lines in hs38d5_Nsub.fa is 51471479
+
 to extract only decoy:
+
     chr sed -e '1,51471479d' hs38d5.fa > decoy_chr.fa
 
 Combine the output of fasta_N_sub.py with the non-substituted decoy chromosomes:
+
     cat hs38d5_Nsub.fa decoy_chr.fa > ~/RPE1-SNPs/hs38d5_Nsub.with-decoy.fa
 
     vcf number of SNPs is 3832729
