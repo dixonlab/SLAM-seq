@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-master_dir = '~/hisat-3n-FR'
-min_MQ = 10
-gtf_path = '~/gencode.v25/gencode.v25.annotation.gtf'
+master_dir = '~/hisat-3n-FR' # the output directory from SLAM_hisat-3n
+min_MQ = 10 # minimum MAPQ
+gtf_path = '~/gencode.v25/gencode.v25.annotation.gtf' # path to gtf gile
 
 import pandas as pd
 import os
