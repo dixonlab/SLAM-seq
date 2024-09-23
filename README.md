@@ -26,14 +26,8 @@ Build the T->C conversion genome needed for hisat-3n (see https://daehwankimlab.
     
     hisat-3n-build --base-change T,C ~/RPE1-SNPs/hs38d5_RPE1_Nsub.with-decoy.fa ~/RPE1-SNPs/HISAT-3N_SLAMseq/hs38d5_RPE1_Nsub.with-decoy.TC
 
-Then can run SLAM_hisat-3n.sh to perform the alignment.
-    You will need to modify various things within this script before running.
+Then can run SLAM_hisat-3n.sh to perform the alignment. You will need to modify various things within this script before running.
 
-Then can run SLAM_HTSeq_FR.py
-    You will need to modify various things within this script before running.
-    Dependencies are pandas, os, collections, and HTSeq
+Then can run SLAM_HTSeq_FR.py. You will need to modify various things within this script before running. Dependencies are pandas, os, collections, and HTSeq.
 
-Then can run SLAM-DESeq.r
-    You will need to modify various things within this script before running.
-    You will also need to create a SLAM_summary.txt type file (see example).
-    Dependencies are DESeq2, dplyr, data.table, stringr, and comprehenr
+Then can run SLAM-DESeq.r. You will need to modify various things within this script before running. You will also need to create a SLAM_summary.txt type file (see example). Dependencies are DESeq2, dplyr, data.table, stringr, and comprehenr
