@@ -39,3 +39,5 @@ Then can run SLAM_hisat-3n.sh to perform the alignment. You will need to modify 
 Then can run SLAM_HTSeq_FR.py. You will need to modify modify "master_dir" and "gtf_path" prior to running. Dependencies are pandas, os, collections, and HTSeq.
 
 Then can run SLAM-DESeq.r. You will need to modify "hisat_out", "BED_FILE", and "SLAM_summary_path" before running. You will also need to create a SLAM_summary.txt type file (see example). Dependencies are DESeq2, dplyr, data.table, stringr, and comprehenr
+
+Note that, in the original version of the SLAM_HTSeq_FR.py script, there were remnants in the code from testing that make it non-functional. This has been fixed in SLAM_HTSeq_FR_v2.py
