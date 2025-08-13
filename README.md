@@ -41,3 +41,5 @@ Then can run SLAM_HTSeq_FR.py. You will need to modify "master_dir" and "gtf_pat
 Then can run SLAM-DESeq.r. You will need to modify "hisat_out", "BED_FILE", and "SLAM_summary_path" before running. You will also need to create a SLAM_summary.txt type file (see example). Dependencies are DESeq2, dplyr, data.table, stringr, and comprehenr
 
 Note that, in the original version of the SLAM_HTSeq_FR.py script, there were remnants in the code from testing that make it non-functional. This has been fixed in SLAM_HTSeq_FR_v2.py
+
+Test data for use in SLAM_HTSeq_FR.py then SLAM-DESeq.r can be downloaded from https://www.dropbox.com/scl/fi/obkmwbq66nwwuqrgm0l49/testData.tar.gz?rlkey=jha8apv3869bsulhcpmz7a6et&dl=0. See testData_README for more specific details for dependencies and running the test data.
