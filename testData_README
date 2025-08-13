@@ -1,0 +1,47 @@
+Test data can be downloaded from here: https://www.dropbox.com/scl/fi/obkmwbq66nwwuqrgm0l49/testData.tar.gz?rlkey=jha8apv3869bsulhcpmz7a6et&dl=0
+
+We have run these previously only on Rocky Linux 9.4 (Blue Onyx), see below for the primary dependencies.
+There is no required install of these, assuming you already have Python and R, as they are run
+directly from the scripts. See below for required script modifications.
+
+SLAM_HTSeq_FR_v2.py
+Python (includes os and collections): 3.7.13
+pandas: 1.3.5
+HTSeq: 2.0.0
+
+Before running, modify "master_dir" to the location of the testData directory
+and change the path to the gtf file, such as one downlaoded from https://www.gencodegenes.org/human/
+
+For the chr22-only test files, the run time is ~15 minutes, or 3-4 minutes per file.
+
+For each of the directories in testDATA (i.e. cardio_DM_R1_chr22,cardio_DM_R2_chr22,cardio_dT_R1_chr22,cardio_dT_R2_chr22),
+it will create a sub-directory called counts and save the following files here
+  HTSeq_counts_gene.tsv
+    12 column file containing gene position, strand, ID, and name. For each gene, it returns the number of reads that have
+    at least one T->C conversion (TC_read_counts), total read counts for that gene (converted + unconverted), the total number of
+    converted and unconverted Ts (across all reads for that gene), and the conversion rate based on the ratio of converted to
+    unconverted Ts.
+  HTSeq_excluded_counts_gene.tsv
+    Returns the number of reads that don't align to a feature (_no_feature), ambiguous reads, and unampped
+
+
+SLAM-DESeq.r
+DESeq2: 1.47.3
+data.table: 1.16.4
+dplyr: 1.1.4
+stringr: 1.5.1
+comprehenr: 0.6.10
+
+Before running, you will need to modify "hisat_out", which is really the same path as "master_dir" from SLAM_HTSeq_FR_v2.py (i.e. testData
+directory), the BED_FILE path (is just a .bed file derived from the .gtf file used above, containing only genes), and the SLAM_summary_path,
+which just contains basic information about the experiments so it can determine the appropriate comparisons and replicates. You can
+use the example "example_SLAM_summary.txt". You can also change the nascent_filter, which I usually set to 20 for 120min 4sU labeling
+
+For the chr22-only test files, the run time is <1 minute.
+
+This will create a new directory in "hisat_out" called "testDESEQ-WG". This contains the DESEQ output for nascent and total
+transcripts (in DMSO_deseq-analysis), nascent and total expression data and class files for GSEA (in GSEA), a "WG_merged_counts.txt" file
+containing the nascent (_tc) and total (_total) counts for each gene, and nascent and total FPKM tables. Note that the output from DESEQ will
+be slightly different from our findings due to the number of tests and FDR.
+
+
