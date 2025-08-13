@@ -36,7 +36,7 @@ Build the T->C conversion genome needed for hisat-3n (see https://daehwankimlab.
 
 Then can run SLAM_hisat-3n.sh to perform the alignment. You will need to modify the paths for "FASTQ_DIR", "DATA_DIR", "CPUS", "GEN_DIR", "hisat", and "PICARD" before running. This performs alignment using HISAT-3N, sorting using samtools, and removal of duplicates using Picard. Note that the reversal of the forward and reverse reads in HISAT-3N is based on the use of the Zymo-Seq RiboFree Total RNA Library Kit, and is necessary for the accurate annotation of reads from nascent transcripts.
 
-Then can run SLAM_HTSeq_FR.py. You will need to modify modify "master_dir" and "gtf_path" prior to running. Dependencies are pandas, os, collections, and HTSeq.
+Then can run SLAM_HTSeq_FR.py. You will need to modify "master_dir" and "gtf_path" prior to running. Dependencies are pandas, os, collections, and HTSeq.
 
 Then can run SLAM-DESeq.r. You will need to modify "hisat_out", "BED_FILE", and "SLAM_summary_path" before running. You will also need to create a SLAM_summary.txt type file (see example). Dependencies are DESeq2, dplyr, data.table, stringr, and comprehenr
 
