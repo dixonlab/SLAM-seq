@@ -1,5 +1,0 @@
-Library	Replicate	Labeling time	Treatment	Treatment length
-cardio_DM_R1_chr22	1	120min	DMSO	4hr
-cardio_DM_R2_chr22	2	120min	DMSO	4hr
-cardio_dT_R1_chr22	1	120min	dTAG	4hr
-cardio_dT_R2_chr22	2	120min	dTAG	4hr
